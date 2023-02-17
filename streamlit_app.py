@@ -22,7 +22,7 @@ if st.button("Registrarse"):
     confirm_password = st.text_input("Confirmar contraseña", type="password")
     
     # Botón de registro
-    if st.button("Registrarse"):
+    if st.button("Registrarse", key="register_button"):
         # Validación de contraseña
         if password == confirm_password:
             # Insertar los datos del usuario en la base de datos
@@ -35,7 +35,7 @@ if st.button("Registrarse"):
             st.error("Las contraseñas no coinciden")
             
 # Página de inicio de sesión
-if st.button("Iniciar Sesión"):
+if st.button("Iniciar Sesión", key="login_button"):
     st.subheader("Inicio de Sesión")
     # Formulario de inicio de sesión
     email = st.text_input("Correo electrónico")
